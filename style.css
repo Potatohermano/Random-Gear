@@ -45,7 +45,7 @@ body {
     width: 300px;
     display: block;
     object-fit: cover;
-    margin-left: 10px;
+    margin-left: 7px;
 }
 input{
     display: none;
@@ -63,4 +63,8 @@ button{
     width: 100px;
     height: 50px;
     border-radius: 10px;
+}
+
+#Weapon{
+    margin-right: 5px;
 }
