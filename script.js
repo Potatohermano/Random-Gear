@@ -69,9 +69,9 @@ function rollDice5(){
      const images = []; 
      
      for(let i = 0; i < numOfDice; i++){ 
-         const value = Math.floor(Math.random() * 27) + 1;
+         const value = Math.floor(Math.random() * 48) + 1;
          values.push(value); 
-         images.push(`<img src="Chestplate/${value}.png">`);
+         images.push(`<img src="Weapon/${value}.png">`);
    
       console.log(`Weapon ${values}`)
  
