@@ -71,9 +71,9 @@ function rollHands(){
      const images = []; 
      
      for(let i = 0; i < numOfDice; i++){ 
-         const value = Math.floor(Math.random() * 48) + 1;
+         const value = Math.floor(Math.random() * 88) + 1;
 
-          if(value < 39){
+          if(value < 67){
                values.push(value); 
                images.push(`<img src="Weapon/${value}.png">`);
           
@@ -84,7 +84,7 @@ function rollHands(){
           }
           else{
                for(let i = 0; i < numOfDice; i++){ 
-               const value = Math.floor(Math.random() * 10) + 1;
+               const value = Math.floor(Math.random() * 21) + 1;
                values.push(value); 
                images.push(`<img src="Weapon/OneHanded/${value}.png">`);
 
