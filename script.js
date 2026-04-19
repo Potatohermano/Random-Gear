@@ -84,7 +84,7 @@ function rollHands(){
           }
           else{
                for(let i = 0; i < numOfDice; i++){ 
-               const value = Math.floor(Math.random() * 21) + 1;
+               const value = Math.floor(Math.random() * 20) + 1;
                values.push(value); 
                images.push(`<img src="Weapon/OneHanded/${value}.png">`);
 
@@ -93,51 +93,14 @@ function rollHands(){
                Weapon.innerHTML = images.join(''); 
                }
 
-               rollDice7();
+               rollDice5();
           }
 
      }
 
 }
 
-function rollDice5(){ 
-     const numOfDice = document.getElementById("numOfDice").value; 
-     const Weapon = document.getElementById("Weapon");
-     const OffHand = document.getElementById("OffHand");  
-     const values = [];
-     const images = []; 
-     
-     for(let i = 0; i < numOfDice; i++){ 
-         const value = Math.floor(Math.random() * 48) + 1;
-         values.push(value); 
-         images.push(`<img src="Weapon/${value}.png">`);
-   
-     console.log(`Weapon id:${values}`)
- 
-     Weapon.innerHTML = images.join(''); 
-
-     }
-}
-
-function rollDice6(){
-     const numOfDice = document.getElementById("numOfDice").value; 
-     const Weapon = document.getElementById("Weapon");  
-     const values = [];
-     const images = []; 
-     
-     for(let i = 0; i < numOfDice; i++){ 
-     const value = Math.floor(Math.random() * 10) + 1;
-     values.push(value); 
-     images.push(`<img src="Weapon/OneHanded/${value}.png">`);
-
-     console.log(`Weapon id:${values}`)
-
-     Weapon.innerHTML = images.join(''); 
-
-     }
-}
-
-function rollDice7(){
+function rollDice5(){
      const numOfDice = document.getElementById("numOfDice").value; 
      const OffHand = document.getElementById("OffHand");  
      const values = [];
