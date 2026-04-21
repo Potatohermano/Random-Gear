@@ -92,8 +92,11 @@ button{
 }
 #container3{
     margin-top: 10px;
+    position: relative;
+    display: inline-block;
 }
-#container3 img{
+#map{
+    display: block;
     width: 70rem;
     height: 45rem;
     object-fit: fill;
@@ -103,4 +106,228 @@ button{
 
 h1{
     margin: 0;
+}
+
+#HelmetMap{
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: -6px;
+}
+
+#HelmetMap1{
+    display: none;
+    position: absolute;
+    top: -31px;
+    left: 133px;
+}
+
+#HelmetMap2{
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 64px;
+}
+
+#ChestplateMap{
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 103px;
+}
+
+#ChestplateMap1{
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 170px;
+}
+
+#ChestplateMap2{
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+}
+
+#ShoeMap{
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 225px;
+}
+
+#ShoeMap1{
+    display: none;
+    position: absolute;
+    top: 154px;
+    left: 76px;
+}
+
+#ShoeMap2{
+    display: none;
+    position: absolute;
+    top: 110px;
+    left: 155px;
+}
+
+#CapeMap{
+    display: none;
+    position: absolute;
+    top: 110px;
+    left: 40px;
+    width: 900px;
+    height: 350px;
+}
+
+#WeaponMap1{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 255px;
+    left: 355px;
+}
+
+#WeaponMap2{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 401px;
+    left: 355px;
+}
+
+#WeaponMap3{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 536px;
+}
+
+#WeaponMap4{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 325px;
+    left: 426px;
+}
+
+#WeaponMap5{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 197px;
+    left: 422px;
+}
+
+#WeaponMap6{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 155px;
+    left: 611px;
+}
+
+#WeaponMap7{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 600px;
+    left: 530px;
+}
+
+#WeaponMap8{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 500px;
+    left: 605px;
+}
+
+#WeaponMap9{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 262px;
+    left: 495px;
+}
+
+#WeaponMap10{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 205px;
+    left: 555px;
+}
+#WeaponMap11{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 145px;
+    left: 483px;
+}
+#WeaponMap12{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 270px;
+    left: 637px;
+}
+#WeaponMap13{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 490px;
+    left: 437px;
+}
+#WeaponMap14{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 212px;
+    left: 690px;
+}
+
+#WeaponMap15{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 410px;
+    left: 511px;
+}
+
+#WeaponMap16{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 340px;
+    left: 577px;
+
+}
+
+#WeaponMap17{
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 315px;
+    left: 280px;
+}
+
+#OffHandMap1{
+    display: none;
+    position: absolute;
+    top: 470px;
+    left: 726px;
+}
+#OffHandMap2{
+    display: none;
+    position: absolute;
+    top: 390px;
+    left: 780px;
+}
+#OffHandMap3{
+    display: none;
+    position: absolute;
+    top: 330px;
+    left: 832px;
 }
