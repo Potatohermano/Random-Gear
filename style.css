@@ -94,6 +94,7 @@ button{
     margin-top: 10px;
     position: relative;
     display: inline-block;
+    overflow: hidden;
 }
 #map{
     display: block;
@@ -330,4 +331,24 @@ h1{
     position: absolute;
     top: 330px;
     left: 832px;
+}
+
+#PotionMap{
+    display: none;
+    position: absolute;
+    top: 220px;
+    left: -50px;
+    height: 250px;
+    width: 600px;
+    overflow: hidden;
+}
+
+#PotionMap1{
+    display: none;
+    position: absolute;
+    top: 220px;
+    left: -50px;
+    height: 250px;
+    width: 600px;
+    overflow: hidden;
 }
