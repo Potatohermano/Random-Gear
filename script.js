@@ -383,8 +383,10 @@ function rollDice6(){
      const numOfDice = document.getElementById("numOfDice").value; 
      const Potion = document.getElementById("Potion");  
      const PotionMap = document.getElementById("PotionMap");
+     const PotionMap1 = document.getElementById("PotionMap1");
 
      PotionMap.style.display = "none";
+     PotionMap1.style.display = "none";
 
      const images = []; 
      
@@ -402,8 +404,10 @@ function rollDice6(){
 function rollDice7(){
      const numOfDice = document.getElementById("numOfDice").value; 
      const Potion = document.getElementById("Potion");  
+     const PotionMap = document.getElementById("PotionMap");
      const PotionMap1 = document.getElementById("PotionMap1");
 
+     PotionMap.style.display = "none";
      PotionMap1.style.display = "none";
 
      const images = []; 
