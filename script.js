@@ -5,7 +5,6 @@ function rollDice1() {
     const HelmetMap1 = document.getElementById("HelmetMap1");
     const HelmetMap2 = document.getElementById("HelmetMap2");
     
-    // Hide everything before the new roll
     HelmetMap.style.display = "none";
     HelmetMap1.style.display = "none";
     HelmetMap2.style.display = "none";
@@ -16,14 +15,12 @@ function rollDice1() {
         const value = Math.floor(Math.random() * 27) + 1;
         images.push(`<img src="Helmet/${value}.png">`);
 
-        // Update the main container
         Helmet.innerHTML = images.join('');
 
-        // Logic for which map to show
         if (value >= 1 && value <= 9) {
                HelmetMap.src = `Helmet/${value}.png`;
                HelmetMap.style.display = "block";
-               break; // Stop loop if that's your intended logic
+               break;
           } 
           else if (value >= 10 && value <= 18) {
                HelmetMap1.src = `Helmet/${value}.png`;
@@ -125,10 +122,20 @@ function rollDice4(){
           const value = Math.floor(Math.random() * 14) + 1;
           images.push(`<img src="Cape/${value}.png">`);
 
+          if(value == 14){
+               rollDice7();
+               console.log("Smuggler Cape")
+          }
+          else if (value <= 13){
+               rollDice6();
+               console.log("Not Smuggler Cape")
+          }
+
           Cape.innerHTML = images.join('');
 
           CapeMap.src = `Cape/${value}.png`;
           CapeMap.style.display = "block";
+
      }
 
 }
@@ -369,5 +376,45 @@ function rollDice5(){
                OffHandMap3.style.display = "block";
                break;
           }
+     }
+}
+
+function rollDice6(){
+     const numOfDice = document.getElementById("numOfDice").value; 
+     const Potion = document.getElementById("Potion");  
+     const PotionMap = document.getElementById("PotionMap");
+
+     PotionMap.style.display = "none";
+
+     const images = []; 
+     
+     for (let i = 0; i < numOfDice; i++) {
+          const value = Math.floor(Math.random() * 11) + 1;
+          images.push(`<img src="Potion/${value}.png">`);
+
+          Potion.innerHTML = images.join('');
+
+          PotionMap.src = `Potion/${value}.png`;
+          PotionMap.style.display = "block";
+     }
+}
+
+function rollDice7(){
+     const numOfDice = document.getElementById("numOfDice").value; 
+     const Potion = document.getElementById("Potion");  
+     const PotionMap1 = document.getElementById("PotionMap1");
+
+     PotionMap1.style.display = "none";
+
+     const images = []; 
+     
+     for (let i = 0; i < numOfDice; i++) {
+          const value = Math.floor(Math.random() * 11) + 1;
+          images.push(`<img src="TwoPotions/${value}.png">`);
+
+          Potion.innerHTML = images.join('');
+
+          PotionMap1.src = `TwoPotions/${value}.png`;
+          PotionMap1.style.display = "block";
      }
 }
