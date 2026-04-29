@@ -1,4 +1,4 @@
-function rollDice1() {
+function rollHelmet() {
     const numOfDice = document.getElementById("numOfDice").value;
     const Helmet = document.getElementById("Helmet");
     const HelmetMap = document.getElementById("HelmetMap");
@@ -11,6 +11,8 @@ function rollDice1() {
 
     const images = [];
 
+     console.log("----------------------------------------")
+
     for (let i = 0; i < numOfDice; i++) {
         const value = Math.floor(Math.random() * 27) + 1;
         images.push(`<img src="Helmet/${value}.png">`);
@@ -20,22 +22,25 @@ function rollDice1() {
         if (value >= 1 && value <= 9) {
                HelmetMap.src = `Helmet/${value}.png`;
                HelmetMap.style.display = "block";
+               console.log("Metal Helmet");
                break;
           } 
           else if (value >= 10 && value <= 18) {
                HelmetMap1.src = `Helmet/${value}.png`;
                HelmetMap1.style.display = "block";
+               console.log("Cloth Helmet");
                break;
           }
           else if (value >= 19 && value <= 27) {
                HelmetMap2.src = `Helmet/${value}.png`;
                HelmetMap2.style.display = "block";
+               console.log("Leather Helmet");
                break;
           }
     }
 }
 
-function rollDice2(){ 
+function rollChestplate(){ 
      const numOfDice = document.getElementById("numOfDice").value; 
      const Chestplate = document.getElementById("Chestplate"); 
      const ChestplateMap = document.getElementById("ChestplateMap");
@@ -57,22 +62,25 @@ function rollDice2(){
           if (value >= 1 && value <= 9) {
                ChestplateMap.src = `Chestplate/${value}.png`;
                ChestplateMap.style.display = "block";
+               console.log("Leather Chestplate")
                break; 
           } 
           else if (value >= 10 && value <= 18) {
                ChestplateMap1.src = `Chestplate/${value}.png`;
                ChestplateMap1.style.display = "block";
+               console.log("Cloth Chestplate")
                break;
           }
           else if (value >= 19 && value <= 27) {
                ChestplateMap2.src = `Chestplate/${value}.png`;
                ChestplateMap2.style.display = "block";
+               console.log("Metal Chestplate")
                break;
           }
      }
 }
 
-function rollDice3(){ 
+function rollShoe(){ 
      const numOfDice = document.getElementById("numOfDice").value; 
      const Shoe = document.getElementById("Shoe"); 
      const ShoeMap = document.getElementById("ShoeMap");
@@ -94,22 +102,25 @@ function rollDice3(){
           if (value >= 1 && value <= 9) {
                ShoeMap.src = `Shoe/${value}.png`;
                ShoeMap.style.display = "block";
+               console.log("Cloth Shoe")
                break; 
           } 
           else if (value >= 10 && value <= 18) {
                ShoeMap1.src = `Shoe/${value}.png`;
                ShoeMap1.style.display = "block";
+               console.log("Metal Shoe")
                break;
           }
           else if (value >= 19 && value <= 27) {
                ShoeMap2.src = `Shoe/${value}.png`;
                ShoeMap2.style.display = "block";
+               console.log("Leather Shoe")
                break;
           }
      }
 }
 
-function rollDice4(){ 
+function rollCapeAndPotion(){ 
      const numOfDice = document.getElementById("numOfDice").value; 
      const Cape = document.getElementById("Cape"); 
      const CapeMap = document.getElementById("CapeMap");
@@ -123,12 +134,12 @@ function rollDice4(){
           images.push(`<img src="Cape/${value}.png">`);
 
           if(value == 14){
-               rollDice7();
-               console.log("Smuggler Cape")
+               rollTwoPotion();
+               console.log("Smuggler Cape");
           }
           else if (value <= 13){
-               rollDice6();
-               console.log("Not Smuggler Cape")
+               rollOnePotion();
+               console.log("Not Smuggler Cape");
           }
 
           Cape.innerHTML = images.join('');
@@ -136,6 +147,7 @@ function rollDice4(){
           CapeMap.src = `Cape/${value}.png`;
           CapeMap.style.display = "block";
 
+          break;
      }
 
 }
@@ -194,155 +206,300 @@ function rollHands(){
          const value = Math.floor(Math.random() * 127) + 1;
 
           if(value < 93){
-               values.push(value); 
-               images.push(`<img src="Weapon/${value}.png">`);
           
-               console.log(`2hWeapon id:${value}`)
-          
-               Weapon.innerHTML = images.join(''); 
+               console.log(`2hWeapon id:${value}`);
+
                OffHand.innerHTML = '';
+               Weapon.innerHTML = '';
+          
                if(value <= 7){
-                    WeaponMap1.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Crossbow/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap1.src = `Weapon/Crossbow/${value}.png`;
                     WeaponMap1.style.display = "block";
+                    break;
                }
                else if(value >= 8 && value <= 15){
-                    WeaponMap2.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Glove/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap2.src = `Weapon/Glove/${value}.png`;
                     WeaponMap2.style.display = "block";
+                    break;
                }
                else if(value >= 16 && value <= 22){
-                    WeaponMap3.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Hammer/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap3.src = `Weapon/Hammer/${value}.png`;
                     WeaponMap3.style.display = "block";
+                    break;
                }
                else if(value >= 23 && value <= 26){
-                    WeaponMap4.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Mace/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap4.src = `Weapon/Mace/${value}.png`;
                     WeaponMap4.style.display = "block";
+                    break;
                }
                else if(value >= 27 && value <= 33){
-                    WeaponMap5.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Axe/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap5.src = `Weapon/Axe/${value}.png`;
                     WeaponMap5.style.display = "block";
+                    break;
                }
                else if(value >= 34 && value <= 38){
-                    WeaponMap6.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Sword/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap6.src = `Weapon/Sword/${value}.png`;
                     WeaponMap6.style.display = "block";
+                    break;
                }
                else if(value >= 39 && value <= 41 || value === 95){
-                    WeaponMap7.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/NatureStaff/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap7.src = `Weapon/NatureStaff/${value}.png`;
                     WeaponMap7.style.display = "block";
+                    break;
                }
                else if(value >= 43 && value <= 49){
-                    WeaponMap8.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/ShapeShifter/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap8.src = `Weapon/ShapeShifter/${value}.png`;
                     WeaponMap8.style.display = "block";
+                    break;
                }
                else if(value >= 50 && value <= 57){
-                    WeaponMap9.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/PoleStaff/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap9.src = `Weapon/PoleStaff/${value}.png`;
                     WeaponMap9.style.display = "block";
+                    break;
                }
                else if(value >= 58 && value <= 62){
-                    WeaponMap10.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Spear/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap10.src = `Weapon/Spear/${value}.png`;
                     WeaponMap10.style.display = "block";
+                    break;
                }
                else if(value >= 63 && value <= 67){
-                    WeaponMap11.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Dagger/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap11.src = `Weapon/Dagger/${value}.png`;
                     WeaponMap11.style.display = "block";
+                    break;
                }
                else if(value >= 68 && value <= 72){
-                    WeaponMap12.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/FrostStaff/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap12.src = `Weapon/FrostStaff/${value}.png`;
                     WeaponMap12.style.display = "block";
+                    break;
                }
                else if(value >= 73 && value <= 78){
-                    WeaponMap13.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/ArcaneStaff/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap13.src = `Weapon/ArcaneStaff/${value}.png`;
                     WeaponMap13.style.display = "block";
+                    break;
                }
                else if(value >= 79 && value <= 83){
-                    WeaponMap14.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/HolyStaff/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap14.src = `Weapon/HolyStaff/${value}.png`;
                     WeaponMap14.style.display = "block";
+                    break;
                }
                else if(value >= 84 && value <= 87){
-                    WeaponMap15.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/CurseStaff/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap15.src = `Weapon/CurseStaff/${value}.png`;
                     WeaponMap15.style.display = "block";
+                    break;
                }
                else if(value >= 88 && value <= 92){
-                    WeaponMap16.src = `Weapon/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/FireStaff/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap16.src = `Weapon/FireStaff/${value}.png`;
                     WeaponMap16.style.display = "block";
+                    break;
                }
-               else if(value >= 93 || 94 || value >= 96){
-                    WeaponMap17.src = `Weapon/${value}.png`;
+               else if(value >= 93 || value === 94 || value >= 96){
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Bow/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+                    
+                    WeaponMap17.src = `Weapon/Bow/${value}.png`;
                     WeaponMap17.style.display = "block";
+                    break;
                }
           }
           else{
                for(let i = 0; i < numOfDice; i++){ 
                const value = Math.floor(Math.random() * 35) + 1;
-               values.push(value); 
-               images.push(`<img src="Weapon/OneHanded/${value}.png">`);
 
                console.log(`1hWeapon id:${value}`)
-
-               Weapon.innerHTML = images.join('');
                
                if(value === 10){
-                    WeaponMap1.src = `Weapon/OneHanded/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Crossbow/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+
+                    WeaponMap1.src = `Weapon/Crossbow/${value}.png`;
                     WeaponMap1.style.display = "block";
+                    break;
                }
                else if(value === 1){
-                    WeaponMap3.src = `Weapon/OneHanded/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Hammer/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+
+                    WeaponMap3.src = `Weapon/Hammer/${value}.png`;
                     WeaponMap3.style.display = "block";
+                    break;
                }
-               else if(value === 3 || 4 || 6 || 7){
-                    WeaponMap4.src = `Weapon/OneHanded/${value}.png`;
+               else if(value === 3 || value === 4 || value === 6 || value === 7){
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Mace/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+
+                    WeaponMap4.src = `Weapon/Mace/${value}.png`;
                     WeaponMap4.style.display = "block";
+                    break;
                }
                else if(value === 9){
-                    WeaponMap5.src = `Weapon/OneHanded/${value}.png`;
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Axe/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+
+                    WeaponMap5.src = `Weapon/Axe/${value}.png`;
                     WeaponMap5.style.display = "block";
+                    break;
                }
-               else if(value === 2 || 5 || 8){
-                    WeaponMap6.src = `Weapon/OneHanded/${value}.png`;
+               else if(value === 2 || value === 5 || value === 8){
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Sword/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+
+                    WeaponMap6.src = `Weapon/Sword/${value}.png`;
                     WeaponMap6.style.display = "block";
+                    break;
                }
-               else if(value === 11 || 12 || 13 || 14){
-                    WeaponMap7.src = `Weapon/OneHanded/${value}.png`;
+               else if(value === 11 || value === 12 || value === 13 || value === 14){
+                    values.push(value); 
+                    images.push(`<img src="Weapon/NatureStaff/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+
+                    WeaponMap7.src = `Weapon/NatureStaff/${value}.png`;
                     WeaponMap7.style.display = "block";
+                    break;
                }
-               else if(value === 15 || 16 || 17){
-                    WeaponMap10.src = `Weapon/OneHanded/${value}.png`;
+               else if(value === 15 || value === 16 || value === 17){
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Spear/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+
+                    WeaponMap10.src = `Weapon/Spear/${value}.png`;
                     WeaponMap10.style.display = "block";
+                    break;
                }
-               else if(value === 18 || 19 || 20){
-                    WeaponMap11.src = `Weapon/OneHanded/${value}.png`;
+               else if(value === 18 || value === 19 || value === 20){
+                    values.push(value); 
+                    images.push(`<img src="Weapon/Dagger/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+
+                    WeaponMap11.src = `Weapon/Dagger/${value}.png`;
                     WeaponMap11.style.display = "block";
+                    break;
                }
-               else if(value === 21 || 22 || 23){
-                    WeaponMap12.src = `Weapon/OneHanded/${value}.png`;
+               else if(value === 21 || value === 22 || value === 23){
+                    values.push(value); 
+                    images.push(`<img src="Weapon/FrostStaff/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+
+                    WeaponMap12.src = `Weapon/FrostStaff/${value}.png`;
                     WeaponMap12.style.display = "block";
+                    break;
                }
-               else if(value === 24 || 25){
-                    WeaponMap13.src = `Weapon/OneHanded/${value}.png`;
+               else if(value === 24 || value === 25){
+                    values.push(value); 
+                    images.push(`<img src="Weapon/ArcaneStaff/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+
+                    WeaponMap13.src = `Weapon/ArcaneStaff/${value}.png`;
                     WeaponMap13.style.display = "block";
+                    break;
                }
-               else if(value === 26 || 27 || 28){
-                    WeaponMap14.src = `Weapon/OneHanded/${value}.png`;
+               else if(value === 26 || value === 27 || value === 28){
+                    values.push(value); 
+                    images.push(`<img src="Weapon/HolyStaff/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+
+                    WeaponMap14.src = `Weapon/HolyStaff/${value}.png`;
                     WeaponMap14.style.display = "block";
+                    break;
                }
-               else if(value === 29 || 30 || 31 || 32){
-                    WeaponMap15.src = `Weapon/OneHanded/${value}.png`;
+               else if(value === 29 || value === 30 || value === 31 || value === 32){
+                    values.push(value); 
+                    images.push(`<img src="Weapon/CurseStaff/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+
+                    WeaponMap15.src = `Weapon/CurseStaff/${value}.png`;
                     WeaponMap15.style.display = "block";
+                    break;
                }
-               else if(value === 33 || 34 || 35){
-                    WeaponMap16.src = `Weapon/OneHanded/${value}.png`;
+               else if(value === 33 || value === 34 || value === 35){
+                    values.push(value); 
+                    images.push(`<img src="Weapon/FireStaff/${value}.png">`);
+                    Weapon.innerHTML = images.join(''); 
+
+                    WeaponMap16.src = `Weapon/FireStaff/${value}.png`;
                     WeaponMap16.style.display = "block";
+                    break;
                }
 
                }
 
-               rollDice5();
+               rollOffhand();
           }
 
      }
 
 }
 
-function rollDice5(){
+function rollOffhand(){
      const numOfDice = document.getElementById("numOfDice").value; 
      const OffHand = document.getElementById("OffHand");  
      const OffHandMap1 = document.getElementById("OffHandMap1");
@@ -360,6 +517,8 @@ function rollDice5(){
           images.push(`<img src="OffHand/${value}.png">`);
 
           OffHand.innerHTML = images.join('');
+
+          console.log(`Offhand ID:${value}`)
 
           if (value >= 1 && value <= 6) {
                OffHandMap1.src = `OffHand/${value}.png`;
@@ -379,7 +538,7 @@ function rollDice5(){
      }
 }
 
-function rollDice6(){
+function rollOnePotion(){
      const numOfDice = document.getElementById("numOfDice").value; 
      const Potion = document.getElementById("Potion");  
      const PotionMap = document.getElementById("PotionMap");
@@ -401,7 +560,7 @@ function rollDice6(){
      }
 }
 
-function rollDice7(){
+function rollTwoPotion(){
      const numOfDice = document.getElementById("numOfDice").value; 
      const Potion = document.getElementById("Potion");  
      const PotionMap = document.getElementById("PotionMap");
