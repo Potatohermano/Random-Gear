@@ -352,3 +352,9 @@ h1{
     width: 600px;
     overflow: hidden;
 }
+
+footer{
+    position: absolute;
+    bottom: 0%;
+    font-size: 7px;
+}
