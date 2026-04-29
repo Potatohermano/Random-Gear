@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Albion Online - Random Gear Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image.png" href="logo.png">
 </head>
 <body>
 
     <div id="container">
         <h1>Gear Roller</h1>
         <input type="number" id="numOfDice" value="1" min="1">
-        <button onclick="rollDice1(),rollDice2(),rollDice3(),rollDice4(),rollHands()">Roll Gear</button>
+        <button onclick="rollHelmet(),rollChestplate(),rollShoe(),rollCapeAndPotion(),rollHands()">Roll Gear</button>
     </div>
     <div id="container2">
             <div id="Space" class="gearImages"></div>
@@ -130,142 +131,176 @@
                 <img src="Cape/14.png" id="CapeMap">
             </div>
             <div id="WeaponSet">
-                <img src="Weapon/OneHanded/10.png" id="WeaponMap1">
-                <img src="Weapon/1.png" id="WeaponMap1">
-                <img src="Weapon/2.png" id="WeaponMap1">
-                <img src="Weapon/3.png" id="WeaponMap1">
-                <img src="Weapon/4.png" id="WeaponMap1">
-                <img src="Weapon/5.png" id="WeaponMap1">
-                <img src="Weapon/6.png" id="WeaponMap1">
-                <img src="Weapon/7.png" id="WeaponMap1">
-                <img src="Weapon/8.png" id="WeaponMap2">
-                <img src="Weapon/9.png" id="WeaponMap2">
-                <img src="Weapon/10.png" id="WeaponMap2">
-                <img src="Weapon/11.png" id="WeaponMap2">
-                <img src="Weapon/12.png" id="WeaponMap2">
-                <img src="Weapon/13.png" id="WeaponMap2">
-                <img src="Weapon/14.png" id="WeaponMap2">
-                <img src="Weapon/15.png" id="WeaponMap2">
-                <img src="Weapon/OneHanded/1.png" id="WeaponMap3">
-                <img src="Weapon/16.png" id="WeaponMap3">
-                <img src="Weapon/17.png" id="WeaponMap3">
-                <img src="Weapon/18.png" id="WeaponMap3">
-                <img src="Weapon/19.png" id="WeaponMap3">
-                <img src="Weapon/20.png" id="WeaponMap3">
-                <img src="Weapon/21.png" id="WeaponMap3">
-                <img src="Weapon/22.png" id="WeaponMap3">
-                <img src="Weapon/OneHanded/3.png" id="WeaponMap4">
-                <img src="Weapon/OneHanded/4.png" id="WeaponMap4">
-                <img src="Weapon/OneHanded/6.png" id="WeaponMap4">
-                <img src="Weapon/OneHanded/7.png" id="WeaponMap4">
-                <img src="Weapon/23.png" id="WeaponMap4">
-                <img src="Weapon/24.png" id="WeaponMap4">
-                <img src="Weapon/25.png" id="WeaponMap4">
-                <img src="Weapon/26.png" id="WeaponMap4">
-                <img src="Weapon/OneHanded/9.png" id="WeaponMap5">
-                <img src="Weapon/27.png" id="WeaponMap5">
-                <img src="Weapon/28.png" id="WeaponMap5">
-                <img src="Weapon/29.png" id="WeaponMap5">
-                <img src="Weapon/30.png" id="WeaponMap5">
-                <img src="Weapon/31.png" id="WeaponMap5">
-                <img src="Weapon/32.png" id="WeaponMap5">
-                <img src="Weapon/33.png" id="WeaponMap5">
-                <img src="Weapon/OneHanded/2.png" id="WeaponMap6">
-                <img src="Weapon/OneHanded/5.png" id="WeaponMap6">
-                <img src="Weapon/OneHanded/8.png" id="WeaponMap6">
-                <img src="Weapon/34.png" id="WeaponMap6">
-                <img src="Weapon/35.png" id="WeaponMap6">
-                <img src="Weapon/36.png" id="WeaponMap6">
-                <img src="Weapon/37.png" id="WeaponMap6">
-                <img src="Weapon/38.png" id="WeaponMap6">
-                <img src="Weapon/OneHanded/11.png" id="WeaponMap7">
-                <img src="Weapon/OneHanded/12.png" id="WeaponMap7">
-                <img src="Weapon/OneHanded/13.png" id="WeaponMap7">
-                <img src="Weapon/OneHanded/14.png" id="WeaponMap7">
-                <img src="Weapon/39.png" id="WeaponMap7">
-                <img src="Weapon/40.png" id="WeaponMap7">
-                <img src="Weapon/41.png" id="WeaponMap7">
-                <img src="Weapon/95.png" id="WeaponMap7">
-                <img src="Weapon/42.png" id="WeaponMap8">
-                <img src="Weapon/43.png" id="WeaponMap8">
-                <img src="Weapon/44.png" id="WeaponMap8">
-                <img src="Weapon/45.png" id="WeaponMap8">
-                <img src="Weapon/46.png" id="WeaponMap8">
-                <img src="Weapon/47.png" id="WeaponMap8">
-                <img src="Weapon/48.png" id="WeaponMap8">
-                <img src="Weapon/49.png" id="WeaponMap8">
-                <img src="Weapon/50.png" id="WeaponMap9">
-                <img src="Weapon/51.png" id="WeaponMap9">
-                <img src="Weapon/52.png" id="WeaponMap9">
-                <img src="Weapon/53.png" id="WeaponMap9">
-                <img src="Weapon/54.png" id="WeaponMap9">
-                <img src="Weapon/55.png" id="WeaponMap9">
-                <img src="Weapon/56.png" id="WeaponMap9">
-                <img src="Weapon/57.png" id="WeaponMap10">
-                <img src="Weapon/58.png" id="WeaponMap10">
-                <img src="Weapon/OneHanded/15.png" id="WeaponMap10">
-                <img src="Weapon/OneHanded/16.png" id="WeaponMap10">
-                <img src="Weapon/OneHanded/17.png" id="WeaponMap10">
-                <img src="Weapon/59.png" id="WeaponMap10">
-                <img src="Weapon/60.png" id="WeaponMap10">
-                <img src="Weapon/61.png" id="WeaponMap10">
-                <img src="Weapon/62.png" id="WeaponMap10">
-                <img src="Weapon/63.png" id="WeaponMap11">
-                <img src="Weapon/OneHanded/18.png" id="WeaponMap11">
-                <img src="Weapon/OneHanded/19.png" id="WeaponMap11">
-                <img src="Weapon/OneHanded/20.png" id="WeaponMap11">
-                <img src="Weapon/64.png" id="WeaponMap11">
-                <img src="Weapon/65.png" id="WeaponMap11">
-                <img src="Weapon/66.png" id="WeaponMap11">
-                <img src="Weapon/67.png" id="WeaponMap11">
-                <img src="Weapon/OneHanded/21.png" id="WeaponMap12">
-                <img src="Weapon/OneHanded/22.png" id="WeaponMap12">
-                <img src="Weapon/OneHanded/23.png" id="WeaponMap12">
-                <img src="Weapon/68.png" id="WeaponMap12">
-                <img src="Weapon/69.png" id="WeaponMap12">
-                <img src="Weapon/70.png" id="WeaponMap12">
-                <img src="Weapon/71.png" id="WeaponMap12">
-                <img src="Weapon/72.png" id="WeaponMap12">
-                <img src="Weapon/OneHanded/24.png" id="WeaponMap13">
-                <img src="Weapon/OneHanded/25.png" id="WeaponMap13">
-                <img src="Weapon/73.png" id="WeaponMap13">
-                <img src="Weapon/74.png" id="WeaponMap13">
-                <img src="Weapon/75.png" id="WeaponMap13">
-                <img src="Weapon/76.png" id="WeaponMap13">
-                <img src="Weapon/77.png" id="WeaponMap13">
-                <img src="Weapon/78.png" id="WeaponMap13">
-                <img src="Weapon/OneHanded/26.png" id="WeaponMap14">
-                <img src="Weapon/OneHanded/27.png" id="WeaponMap14">
-                <img src="Weapon/OneHanded/28.png" id="WeaponMap14">
-                <img src="Weapon/79.png" id="WeaponMap14">
-                <img src="Weapon/80.png" id="WeaponMap14">
-                <img src="Weapon/81.png" id="WeaponMap14">
-                <img src="Weapon/82.png" id="WeaponMap14">
-                <img src="Weapon/83.png" id="WeaponMap14">
-                <img src="Weapon/84.png" id="WeaponMap15">
-                <img src="Weapon/85.png" id="WeaponMap15">
-                <img src="Weapon/86.png" id="WeaponMap15">
-                <img src="Weapon/87.png" id="WeaponMap15">
-                <img src="Weapon/OneHanded/29.png" id="WeaponMap15">
-                <img src="Weapon/OneHanded/30.png" id="WeaponMap15">
-                <img src="Weapon/OneHanded/31.png" id="WeaponMap15">
-                <img src="Weapon/OneHanded/32.png" id="WeaponMap15">
-                <img src="Weapon/88.png" id="WeaponMap16">
-                <img src="Weapon/89.png" id="WeaponMap16">
-                <img src="Weapon/90.png" id="WeaponMap16">
-                <img src="Weapon/91.png" id="WeaponMap16">
-                <img src="Weapon/OneHanded/33.png" id="WeaponMap16">
-                <img src="Weapon/OneHanded/34.png" id="WeaponMap16">
-                <img src="Weapon/OneHanded/35.png" id="WeaponMap16">
-                <img src="Weapon/92.png" id="WeaponMap16">
-                <img src="Weapon/93.png" id="WeaponMap17">
-                <img src="Weapon/94.png" id="WeaponMap17">
-                <img src="Weapon/96.png" id="WeaponMap17">
-                <img src="Weapon/97.png" id="WeaponMap17">
-                <img src="Weapon/98.png" id="WeaponMap17">
-                <img src="Weapon/99.png" id="WeaponMap17">
-                <img src="Weapon/100.png" id="WeaponMap17">
-                <img src="Weapon/101.png" id="WeaponMap17">
+                <div id="CrossbowSet1">
+                    <img src="Weapon/Crossbow/10.png" id="WeaponMap1">
+                    <img src="Weapon/Crossbow/1.png" id="WeaponMap1">
+                    <img src="Weapon/Crossbow/2.png" id="WeaponMap1">
+                    <img src="Weapon/Crossbow/3.png" id="WeaponMap1">
+                    <img src="Weapon/Crossbow/4.png" id="WeaponMap1">
+                    <img src="Weapon/Crossbow/5.png" id="WeaponMap1">
+                    <img src="Weapon/Crossbow/6.png" id="WeaponMap1">
+                    <img src="Weapon/Crossbow/7.png" id="WeaponMap1">
+                </div>
+                <div id="GloveSet2">
+                    <img src="Weapon/Glove/8.png" id="WeaponMap2">
+                    <img src="Weapon/Glove/9.png" id="WeaponMap2">
+                    <img src="Weapon/Glove/10.png" id="WeaponMap2">
+                    <img src="Weapon/Glove/11.png" id="WeaponMap2">
+                    <img src="Weapon/Glove/12.png" id="WeaponMap2">
+                    <img src="Weapon/Glove/13.png" id="WeaponMap2">
+                    <img src="Weapon/Glove/14.png" id="WeaponMap2">
+                    <img src="Weapon/Glove/15.png" id="WeaponMap2">
+                </div>
+                <div id="HammerSet3">
+                    <img src="Weapon/Hammer/1.png" id="WeaponMap3">
+                    <img src="Weapon/Hammer/16.png" id="WeaponMap3">
+                    <img src="Weapon/Hammer/17.png" id="WeaponMap3">
+                    <img src="Weapon/Hammer/18.png" id="WeaponMap3">
+                    <img src="Weapon/Hammer/19.png" id="WeaponMap3">
+                    <img src="Weapon/Hammer/20.png" id="WeaponMap3">
+                    <img src="Weapon/Hammer/21.png" id="WeaponMap3">
+                    <img src="Weapon/Hammer/22.png" id="WeaponMap3">
+                </div>
+                <div id="MaceSet4">
+                    <img src="Weapon/Mace/3.png" id="WeaponMap4">
+                    <img src="Weapon/Mace/4.png" id="WeaponMap4">
+                    <img src="Weapon/Mace/6.png" id="WeaponMap4">
+                    <img src="Weapon/Mace/7.png" id="WeaponMap4">
+                    <img src="Weapon/Mace/23.png" id="WeaponMap4">
+                    <img src="Weapon/Mace/24.png" id="WeaponMap4">
+                    <img src="Weapon/Mace/25.png" id="WeaponMap4">
+                    <img src="Weapon/Mace/26.png" id="WeaponMap4">
+                </div>
+                <div id="AxeSet5">
+                    <img src="Weapon/Axe/9.png" id="WeaponMap5">
+                    <img src="Weapon/Axe/27.png" id="WeaponMap5">
+                    <img src="Weapon/Axe/28.png" id="WeaponMap5">
+                    <img src="Weapon/Axe/29.png" id="WeaponMap5">
+                    <img src="Weapon/Axe/30.png" id="WeaponMap5">
+                    <img src="Weapon/Axe/31.png" id="WeaponMap5">
+                    <img src="Weapon/Axe/32.png" id="WeaponMap5">
+                    <img src="Weapon/Axe/33.png" id="WeaponMap5">
+                </div>
+                <div id="SwordSet6">
+                    <img src="Weapon/Sword/2.png" id="WeaponMap6">
+                    <img src="Weapon/Sword/5.png" id="WeaponMap6">
+                    <img src="Weapon/Sword/8.png" id="WeaponMap6">
+                    <img src="Weapon/Sword/34.png" id="WeaponMap6">
+                    <img src="Weapon/Sword/35.png" id="WeaponMap6">
+                    <img src="Weapon/Sword/36.png" id="WeaponMap6">
+                    <img src="Weapon/Sword/37.png" id="WeaponMap6">
+                    <img src="Weapon/Sword/38.png" id="WeaponMap6">
+                </div>
+                <div id="NatureStaffSet7">
+                    <img src="Weapon/NatureStaff/11.png" id="WeaponMap7">
+                    <img src="Weapon/NatureStaff/12.png" id="WeaponMap7">
+                    <img src="Weapon/NatureStaff/13.png" id="WeaponMap7">
+                    <img src="Weapon/NatureStaff/14.png" id="WeaponMap7">
+                    <img src="Weapon/NatureStaff/39.png" id="WeaponMap7">
+                    <img src="Weapon/NatureStaff/40.png" id="WeaponMap7">
+                    <img src="Weapon/NatureStaff/41.png" id="WeaponMap7">
+                    <img src="Weapon/NatureStaff/95.png" id="WeaponMap7">
+                </div>
+                <div id="ShapeShifterSet8">
+                    <img src="Weapon/ShapeShifter/42.png" id="WeaponMap8">
+                    <img src="Weapon/ShapeShifter/43.png" id="WeaponMap8">
+                    <img src="Weapon/ShapeShifter/44.png" id="WeaponMap8">
+                    <img src="Weapon/ShapeShifter/45.png" id="WeaponMap8">
+                    <img src="Weapon/ShapeShifter/46.png" id="WeaponMap8">
+                    <img src="Weapon/ShapeShifter/47.png" id="WeaponMap8">
+                    <img src="Weapon/ShapeShifter/48.png" id="WeaponMap8">
+                    <img src="Weapon/ShapeShifter/49.png" id="WeaponMap8">
+                </div>
+                <div id="PoleStaffSet9">
+                    <img src="Weapon/PoleStaff/50.png" id="WeaponMap9">
+                    <img src="Weapon/PoleStaff/51.png" id="WeaponMap9">
+                    <img src="Weapon/PoleStaff/52.png" id="WeaponMap9">
+                    <img src="Weapon/PoleStaff/53.png" id="WeaponMap9">
+                    <img src="Weapon/PoleStaff/54.png" id="WeaponMap9">
+                    <img src="Weapon/PoleStaff/55.png" id="WeaponMap9">
+                    <img src="Weapon/PoleStaff/56.png" id="WeaponMap9">
+                </div>
+                <div id="SpearSet10">
+                    <img src="Weapon/Spear/57.png" id="WeaponMap10">
+                    <img src="Weapon/Spear/58.png" id="WeaponMap10">
+                    <img src="Weapon/Spear/15.png" id="WeaponMap10">
+                    <img src="Weapon/Spear/16.png" id="WeaponMap10">
+                    <img src="Weapon/Spear/17.png" id="WeaponMap10">
+                    <img src="Weapon/Spear/59.png" id="WeaponMap10">
+                    <img src="Weapon/Spear/60.png" id="WeaponMap10">
+                    <img src="Weapon/Spear/61.png" id="WeaponMap10">
+                    <img src="Weapon/Spear/62.png" id="WeaponMap10">
+                </div>
+                <div id="DaggerSet11">
+                    <img src="Weapon/Dagger/63.png" id="WeaponMap11">
+                    <img src="Weapon/Dagger/18.png" id="WeaponMap11">
+                    <img src="Weapon/Dagger/19.png" id="WeaponMap11">
+                    <img src="Weapon/Dagger/20.png" id="WeaponMap11">
+                    <img src="Weapon/Dagger/64.png" id="WeaponMap11">
+                    <img src="Weapon/Dagger/65.png" id="WeaponMap11">
+                    <img src="Weapon/Dagger/66.png" id="WeaponMap11">
+                    <img src="Weapon/Dagger/67.png" id="WeaponMap11">
+                </div>
+                <div id="FrostStaffSet12">
+                    <img src="Weapon/FrostStaff/21.png" id="WeaponMap12">
+                    <img src="Weapon/FrostStaff/22.png" id="WeaponMap12">
+                    <img src="Weapon/FrostStaff/23.png" id="WeaponMap12">
+                    <img src="Weapon/FrostStaff/68.png" id="WeaponMap12">
+                    <img src="Weapon/FrostStaff/69.png" id="WeaponMap12">
+                    <img src="Weapon/FrostStaff/70.png" id="WeaponMap12">
+                    <img src="Weapon/FrostStaff/71.png" id="WeaponMap12">
+                    <img src="Weapon/FrostStaff/72.png" id="WeaponMap12">
+                </div>
+                <div id="ArcaneStaffSet13">
+                    <img src="Weapon/ArcaneStaff/24.png" id="WeaponMap13">
+                    <img src="Weapon/ArcaneStaff/25.png" id="WeaponMap13">
+                    <img src="Weapon/ArcaneStaff/73.png" id="WeaponMap13">
+                    <img src="Weapon/ArcaneStaff/74.png" id="WeaponMap13">
+                    <img src="Weapon/ArcaneStaff/75.png" id="WeaponMap13">
+                    <img src="Weapon/ArcaneStaff/76.png" id="WeaponMap13">
+                    <img src="Weapon/ArcaneStaff/77.png" id="WeaponMap13">
+                    <img src="Weapon/ArcaneStaff/78.png" id="WeaponMap13">
+                </div>
+                <div id="HolyStaffSet14">
+                    <img src="Weapon/HolyStaff/26.png" id="WeaponMap14">
+                    <img src="Weapon/HolyStaff/27.png" id="WeaponMap14">
+                    <img src="Weapon/HolyStaff/28.png" id="WeaponMap14">
+                    <img src="Weapon/HolyStaff/79.png" id="WeaponMap14">
+                    <img src="Weapon/HolyStaff/80.png" id="WeaponMap14">
+                    <img src="Weapon/HolyStaff/81.png" id="WeaponMap14">
+                    <img src="Weapon/HolyStaff/82.png" id="WeaponMap14">
+                    <img src="Weapon/HolyStaff/83.png" id="WeaponMap14">
+                </div>
+                <div id="CurseStaffSet15">
+                    <img src="Weapon/CurseStaff/84.png" id="WeaponMap15">
+                    <img src="Weapon/CurseStaff/85.png" id="WeaponMap15">
+                    <img src="Weapon/CurseStaff/86.png" id="WeaponMap15">
+                    <img src="Weapon/CurseStaff/87.png" id="WeaponMap15">
+                    <img src="Weapon/CurseStaff/29.png" id="WeaponMap15">
+                    <img src="Weapon/CurseStaff/30.png" id="WeaponMap15">
+                    <img src="Weapon/CurseStaff/31.png" id="WeaponMap15">
+                    <img src="Weapon/CurseStaff/32.png" id="WeaponMap15">
+                </div>
+                <div id="FireStaffSet16">
+                    <img src="Weapon/FireStaff/88.png" id="WeaponMap16">
+                    <img src="Weapon/FireStaff/89.png" id="WeaponMap16">
+                    <img src="Weapon/FireStaff/90.png" id="WeaponMap16">
+                    <img src="Weapon/FireStaff/91.png" id="WeaponMap16">
+                    <img src="Weapon/FireStaff/33.png" id="WeaponMap16">
+                    <img src="Weapon/FireStaff/34.png" id="WeaponMap16">
+                    <img src="Weapon/FireStaff/35.png" id="WeaponMap16">
+                    <img src="Weapon/FireStaff/92.png" id="WeaponMap16">
+                </div>
+                <div id="BowSet17">
+                    <img src="Weapon/Bow/93.png" id="WeaponMap17">
+                    <img src="Weapon/Bow/94.png" id="WeaponMap17">
+                    <img src="Weapon/Bow/96.png" id="WeaponMap17">
+                    <img src="Weapon/Bow/97.png" id="WeaponMap17">
+                    <img src="Weapon/Bow/98.png" id="WeaponMap17">
+                    <img src="Weapon/Bow/99.png" id="WeaponMap17">
+                    <img src="Weapon/Bow/100.png" id="WeaponMap17">
+                    <img src="Weapon/Bow/101.png" id="WeaponMap17">
+                </div>
             </div>
             <div id="OffHandSet">
                 <img src="OffHand/1.png" id="OffHandMap1">
@@ -316,4 +351,7 @@
 
     <script src="script.js"></script>
 </body>
+<footer>
+    <h1>Albion Online - Random Gear Generator V1</h1>
+</footer>
 </html>
