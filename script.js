@@ -266,7 +266,7 @@ function rollHands(){
                     WeaponMap6.style.display = "block";
                     break;
                }
-               else if(value >= 39 && value <= 41 || value === 95){
+               else if(value >= 39 && value <= 42 || value === 95){
                     values.push(value); 
                     images.push(`<img src="Weapon/NatureStaff/${value}.png">`);
                     Weapon.innerHTML = images.join(''); 
