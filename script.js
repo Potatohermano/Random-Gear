@@ -203,7 +203,7 @@ function rollHands(){
      WeaponMap17.style.display = "none";
 
      for(let i = 0; i < numOfDice; i++){ 
-         const value = Math.floor(Math.random() * 127) + 1;
+         const value = Math.floor(Math.random() * 128) + 1;
 
           if(value < 93){
           
@@ -266,7 +266,7 @@ function rollHands(){
                     WeaponMap6.style.display = "block";
                     break;
                }
-               else if(value >= 39 && value <= 42 || value === 95){
+               else if(value >= 39 && value <= 41 || value === 95){
                     values.push(value); 
                     images.push(`<img src="Weapon/NatureStaff/${value}.png">`);
                     Weapon.innerHTML = images.join(''); 
@@ -275,7 +275,7 @@ function rollHands(){
                     WeaponMap7.style.display = "block";
                     break;
                }
-               else if(value >= 43 && value <= 49){
+               else if(value >= 42 && value <= 49){
                     values.push(value); 
                     images.push(`<img src="Weapon/ShapeShifter/${value}.png">`);
                     Weapon.innerHTML = images.join(''); 
